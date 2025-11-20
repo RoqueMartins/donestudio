@@ -10,6 +10,12 @@ Aplicativo React responsivo inspirado no fluxo mobile do Instagram, com Tailwind
 - **Recursos de IA**: geração de legendas (simula gemini-2.5-flash-preview-09-2025) e moodboards com o modelo Nanobanana 3.
 - **Tema Claro/Escuro**: alternância de tema com navegação inferior no estilo Instagram para mobile.
 
+## Prévia rápida
+- **Dashboard**: cards de métricas, análise rápida de concorrentes e lista de posts em aprovação com ação de **Aprovar**.
+- **Agendamento**: formulário compacto com seleção de múltiplas plataformas, data/hora e botão de **Agendar Post**.
+- **SAC 2.0**: caixa de mensagens simulando atendimentos multicanal para demonstrar o fluxo de equipe.
+- **Labs de IA**: botões para gerar legenda otimizada e moodboard/arte conceitual diretamente do card do post.
+
 ## Executando localmente
 ```bash
 npm install
