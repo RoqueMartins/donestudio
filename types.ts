@@ -1,34 +1,40 @@
-export type PostStatus = 'pending' | 'approved';
-
-export interface ScheduledPost {
-  id: string;
-  caption: string;
-  aiCaption?: string;
-  scheduledAt: string;
-  platforms: string[];
-  status: PostStatus;
-  createdAt?: string;
-  approvedAt?: string;
-  owner?: string;
+// Basic types for the landing page mock components
+export enum SocialPlatform {
+    INSTAGRAM = 'instagram',
+    TIKTOK = 'tiktok',
+    LINKEDIN = 'linkedin',
+    TWITTER = 'twitter',
+    FACEBOOK = 'facebook'
 }
 
-export interface InboxMessage {
-  id: string;
-  channel: 'Instagram' | 'TikTok' | 'Twitter' | 'LinkedIn';
-  author: string;
-  preview: string;
-  timeAgo: string;
-  priority?: 'alta' | 'normal';
+export enum PostStatus {
+    DRAFT = 'draft',
+    SCHEDULED = 'scheduled',
+    PUBLISHED = 'published',
+    FAILED = 'failed'
 }
 
-export interface MetricCard {
-  label: string;
-  value: string;
-  change: string;
+export interface Post {
+    id: string;
+    clientId: string;
+    platforms: SocialPlatform[];
+    content: string;
+    scheduledFor?: Date;
+    status: PostStatus;
+    image?: string;
+    createdAt: Date;
 }
 
-export interface CompetitorInsight {
-  competitor: string;
-  highlight: string;
-  delta: string;
+export interface Client {
+    id: string;
+    name: string;
+    logo?: string;
+    platforms: SocialPlatform[];
+}
+
+export interface User {
+    id: string;
+    name: string;
+    email: string;
+    avatar?: string;
 }
